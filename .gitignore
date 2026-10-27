@@ -1,0 +1,6 @@
+epub_extract/
+__pycache__/
+*.log
+.tts_tmp/
+.DS_Store
+*.pyc
