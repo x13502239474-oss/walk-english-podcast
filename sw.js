@@ -1,7 +1,6 @@
-const CACHE = 'walkpod-v1';
+const CACHE = 'walkpod-v3';
 const SHELL = [
-  './', './index.html', './manifest.webmanifest', './icon.svg',
-  './data/words.json', './data/episodes.json'
+  './', './index.html', './manifest.webmanifest', './icon.svg'
 ];
 
 self.addEventListener('install', e => {
