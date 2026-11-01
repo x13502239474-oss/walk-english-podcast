@@ -109,6 +109,7 @@ h1{margin:0;font-size:22px;letter-spacing:-.3px}
 .w-idx{font-size:12px;color:#9ca3af;margin-top:auto;padding-top:12px;text-align:right}
 /* 节目卡 */
 .t-en{font-size:23px;font-weight:600;line-height:1.5;color:#111827}
+.t-zh{font-size:20px;font-weight:400;line-height:1.5;color:#374151;margin-top:10px}
 .t-tag{font-size:11.5px;color:var(--pri);background:var(--pri-soft);display:inline-block;
   padding:4px 9px;border-radius:14px;margin-bottom:12px}
 /* 整体译文面板 */
@@ -116,8 +117,8 @@ h1{margin:0;font-size:22px;letter-spacing:-.3px}
   overflow-y:auto;max-height:34vh;box-shadow:var(--sh)}
 .transcript .tl{padding:9px 6px;border-bottom:1px dashed var(--line)}
 .transcript .tl:last-child{border-bottom:0}
-.transcript .tl .en{color:#1f2937;font-size:13.5px;font-weight:500;line-height:1.55}
-.transcript .tl .zh{color:var(--sub);margin-top:3px;font-size:12.5px;line-height:1.55}
+.transcript .tl .en{color:#1f2937;font-size:14.5px;font-weight:500;line-height:1.55}
+.transcript .tl .zh{color:#1f2937;margin-top:3px;font-size:14.5px;line-height:1.55}
 .transcript .tl.on{background:var(--pri-soft);border-radius:8px}
 .transcript .tl.on .en{color:var(--pri);font-weight:600}
 
@@ -224,6 +225,7 @@ h1{margin:0;font-size:22px;letter-spacing:-.3px}
     <div>
       <div class="t-tag" id="t-tag"></div>
       <div class="t-en" id="t-en">准备开始</div>
+      <div class="t-zh" id="t-zh"></div>
     </div>
     <div class="w-idx" id="t-idx"></div>
   </div>
@@ -637,6 +639,8 @@ function render() {
     if (!L) return;
     $('#t-en').textContent = L.en || '';
     $('#t-en').style.display = L.en ? '' : 'none';
+    $('#t-zh').textContent = L.zh || '';
+    $('#t-zh').style.display = L.zh ? '' : 'none';
     $('#t-idx').textContent = (cur.idx + 1) + ' / ' + cur.lines.length;
     markTrans();
   } else {
